@@ -1,0 +1,148 @@
+:root{
+--beach--  :  #23b2a7;
+--fire--   :  #e05e20;
+--bg--     :  #d8d6d4;
+--deeper-- :  #105a52;
+--deep--   :  #1f877d;
+}
+/**************Selectors* ************/
+div#headerNavBar p{
+  float: right;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  margin-right: 15px;
+  transition: color .5s ease,border-color .5s ease;
+  border-bottom:1px solid black;
+}
+
+ div#headerNavBar p:hover{
+ 	color:white;
+  border-bottom-color:white;
+  border-bottom-width:3px ;
+  border-bottom-right-radius: 3px ;
+  border-bottom-left-radius: 3px ;
+  }
+div {
+	overflow: hidden;
+}
+a, a:hover {
+	text-decoration: none;
+	color: black;
+}
+hr{
+	color: transparent;
+}
+/*************Class*********************/
+.mainChilds{
+	background-color: rgba(120,144,255,.7);
+	width:97vw;
+	margin-left: 1.5vw;
+	height: calc(100vh - 90px);
+	position: relative;
+	border-radius: 10px;
+}
+.mainChilds:first-child{
+	margin-top: 100px;
+}
+/***************Ids*********************/
+#headerNavBar1Child{
+	margin-left: 40px;
+}
+#body{
+	background-image: url("1.jpg");
+	background-size: 100vw 100vh;
+	margin: 0;
+	background-color: red;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#header{
+	height: 80px;
+	width: 100vw;
+	background-color: var(--deep--);
+	position: fixed;
+	top:0;
+	z-index: 2;
+	border-bottom: 2px solid black;
+}
+#headerLogo{
+	background: url('1.jpg');
+	background-size: 100px 70px;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 70px;
+	margin: 5px;
+	float: left;
+}
+#slideNavBarButton{
+	font-size: 30px;
+	padding: 5px 10px;
+	position: absolute;
+	top: 17px;
+	right: 25px;
+	z-index: 5;
+	background-color: transparent;
+	color: color;
+	border: 3px solid black;
+	border-radius: 5px;
+	display: none;
+}
+
+#animArrow {
+	text-align: center;
+	position: relative;
+	top: calc( 100vh - 90px );
+  width: 100vw;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	color:black;
+	animation: upDown .8s infinite;
+	z-index: 1;
+}
+/*****************Media*********************/
+  @media Screen and ( max-width : 570px ){
+  div#headerNavBar{
+   background-color: var(--deep--);  
+   position: fixed;
+   top: 85px;
+   width: calc(100vw - 4px);
+   border: 2px solid black;
+   height:calc(100vh - 85px - 4px);
+   left: -100vw;
+   transition: left .5s ease;
+   	}
+  div#headerNavBar p{
+  text-align: center;
+  width: 90vw;
+  msargin: 0;
+  margin: calc(10vh − 265px) calc(5vw - 1px) 0 auto;
+  border-radius: 5px;
+  padding: 10px 0;
+  transition: color .5s ease,border-color .5s ease;
+  border:1px solid black;
+}
+div#headerNavBar p:hover{
+	border:1px solid white;
+ 	color:white;
+  border-color:white;
+  }
+  button#slideNavBarButton {
+  	display: block;
+  }
+   button#slideNavBarButton:hover {
+  border-color: white;
+  color: white;
+  }
+  }
+
+  @media Screen and (min-width: 640px){
+      #headerNavBar1Child{
+ 	       margin-left: 20vw;
+        }
+}
+@keyframes upDown{
+	0%  {top: calc(100vh - 130px);}
+	50% {top: calc(100vh - 160px);}
+	100%{top: calc(100vh - 130px);}
+}
