@@ -4,7 +4,7 @@
 --bg--     :  #d8d6d4;
 --deeper-- :  #105a52;
 --deep--   :  #1f877d;
---heighty--:   100vh;
+--heightVarAnimation--:   100vh;
 }
 /**************Selectors* ************/
 div#headerNavBar p{
@@ -139,7 +139,7 @@ hr{
 }
 /*****************Media*********************/
   @media Screen and ( max-width : 570px ){
-  	     :root{ --heighty--: 60vh;}
+  	     :root{ --heightVarAnimation--: 60vh;}
                  #anonymousChildMain-1{
                   font-size: 40px;
                      }
@@ -197,7 +197,7 @@ hr{
                     }
 } 
     @keyframes upDown{
-	     0%  {top: calc(var(--heighty--) - 130px);}
-	     50% {top: calc(var(--heighty--) - 160px);}
-	     100%{top: calc(var(--heighty--) - 130px);}
+	     0%  {top: calc(var(--heightVarAnimation--) - 130px);}
+	     50% {top: calc(var(--heightVarAnimation--) - 160px);}
+	     100%{top: calc(var(--heightVarAnimation--) - 130px);}
      }
