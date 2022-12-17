@@ -139,7 +139,9 @@ hr{
 }
 /*****************Media*********************/
   @media Screen and ( max-width : 570px ){
-  	     :root{ --heightVarAnimation--: 60vh;}
+  	            :root{ 
+		     --heightVarAnimation--: 60vh;
+	            }
                  #anonymousChildMain-1{
                   font-size: 40px;
                      }
@@ -152,6 +154,7 @@ hr{
                    height:calc(100vh - 85px - 4px);
                    left: -100vw;
                    transition: left .5s ease;
+		   z-index:6;
                     	}
                   div#headerNavBar p{
                   text-align: center;
