@@ -4,7 +4,7 @@
 --bg--     :  #d8d6d4;
 --deeper-- :  #105a52;
 --deep--   :  #1f877d;
---heightVarAnimation--:   100vh;
+--heighty--:   100vh;
 }
 /**************Selectors* ************/
 div#headerNavBar p{
@@ -114,7 +114,7 @@ hr{
 	right: 25px;
 	z-index: 5;
 	background-color: transparent;
-	color: color;
+	color: white;
 	border: 3px solid black;
 	border-radius: 5px;
 	display: none;
@@ -137,11 +137,15 @@ hr{
 	margin-top: 20vh;
 	margin-bottom: 0;
 }
+#headerNavBar{
+	display: block;
+}
+
 /*****************Media*********************/
   @media Screen and ( max-width : 570px ){
   	            :root{ 
-		     --heightVarAnimation--: 60vh;
-	            }
+  	     	             --heighty--: 60vh;
+  	             }
                  #anonymousChildMain-1{
                   font-size: 40px;
                      }
@@ -149,12 +153,13 @@ hr{
                    background-color: var(--deep--);  
                    position: fixed;
                    top: 85px;
+                   display: flex;
+                   flex-direction: column;
                    width: calc(100vw - 4px);
                    border: 2px solid black;
                    height:calc(100vh - 85px - 4px);
                    left: -100vw;
                    transition: left .5s ease;
-		   z-index:6;
                     	}
                   div#headerNavBar p{
                   text-align: center;
@@ -172,6 +177,7 @@ hr{
                       }
                   button#slideNavBarButton {
                   	display: block;
+                  	color: black;
                       }
                   button#slideNavBarButton:hover {
                   border-color: white;
@@ -183,12 +189,6 @@ hr{
                   #anonymousChildMain-1{
                   	margin-top: 10vh;
                   }
-   
-                  #login{}
-                  #services{}
-                  #activits{}
-                  #aboutUs{}
-                  #header{order:1;}
         
                   }
 
@@ -197,8 +197,10 @@ hr{
  	                   margin-left: 20vw;
                     }
 } 
-    @keyframes upDown{
-	     0%  {top: calc(var(--heightVarAnimation--) - 130px);}
-	     50% {top: calc(var(--heightVarAnimation--) - 160px);}
-	     100%{top: calc(var(--heightVarAnimation--) - 130px);}
+      @keyframes upDown{
+	     0%  {top: calc(var(--heighty--) - 130px);}
+	     50% {top: calc(var(--heighty--) - 160px);}
+	     100%{top: calc(var(--heighty--) - 130px);}
      }
+
+ 
