@@ -4,6 +4,7 @@
 --bg--     :  #d8d6d4;
 --deeper-- :  #105a52;
 --deep--   :  #1f877d;
+--heighty--:   100vh;
 }
 /**************Selectors* ************/
 div#headerNavBar p{
@@ -35,8 +36,7 @@ hr{
 /*************Class*********************/
 .mainChilds{
 	background-color: rgba(120,144,255,.7);
-	width:97vw;
-	margin-left: 1.5vw;
+	width:100vw;
 	height: calc(100vh - 90px);
 	position: relative;
 	border-radius: 10px;
@@ -44,8 +44,40 @@ hr{
 .mainChilds:first-child{
 	margin-top: 100px;
 }
+.centered{
+	text-align: center;
+}
+.bi-facebook, .bi-twitter, .bi-instagram {
+	font-size: 30px;
+	margin: auto 20px;
+	padding: 10px 15px;
+	background-color: white;
+	border-radius: 100%;
+	transition: background-color .5s ease;
+}
 /***************Ids*********************/
-#headerNavBar1Child{
+#fcb{
+	color:blue;
+}
+#fcb:hover{
+	color:white;
+	background-color: blue;
+}
+#twr{
+	color:aqua;
+}
+#twr:hover{
+	color:white;
+	background-color: aqua;
+}
+#inst{
+	color:orange;
+}
+#inst:hover{
+	color:white;
+	background-color: orange;
+}
+#headerNavBarLogin{
 	margin-left: 40px;
 }
 #body{
@@ -96,53 +128,76 @@ hr{
 	font-size: 30px;
 	margin: 0;
 	padding: 0;
-	color:black;
 	animation: upDown .8s infinite;
 	z-index: 1;
 }
+#anonymousChildMain-1{
+	font-size:80px ;
+	font-family: 'Lobster', cursive;
+	margin-top: 20vh;
+	margin-bottom: 0;
+}
 /*****************Media*********************/
   @media Screen and ( max-width : 570px ){
-  div#headerNavBar{
-   background-color: var(--deep--);  
-   position: fixed;
-   top: 85px;
-   width: calc(100vw - 4px);
-   border: 2px solid black;
-   height:calc(100vh - 85px - 4px);
-   left: -100vw;
-   transition: left .5s ease;
-   	}
-  div#headerNavBar p{
-  text-align: center;
-  width: 90vw;
-  msargin: 0;
-  margin: calc(10vh − 265px) calc(5vw - 1px) 0 auto;
-  border-radius: 5px;
-  padding: 10px 0;
-  transition: color .5s ease,border-color .5s ease;
-  border:1px solid black;
-}
-div#headerNavBar p:hover{
-	border:1px solid white;
- 	color:white;
-  border-color:white;
-  }
-  button#slideNavBarButton {
-  	display: block;
-  }
-   button#slideNavBarButton:hover {
-  border-color: white;
-  color: white;
-  }
-  }
+  	     :root{ --heighty--: 60vh;}
+                 #anonymousChildMain-1{
+                  font-size: 40px;
+                     }
+                 div#headerNavBar{
+                   background-color: var(--deep--);  
+                   position: fixed;
+                   top: 85px;
+                   width: calc(100vw - 4px);
+                   border: 2px solid black;
+                   height:calc(100vh - 85px - 4px);
+                   left: -100vw;
+                   transition: left .5s ease;
+                    	}
+                  div#headerNavBar p{
+                  text-align: center;
+                  width: 90vw;
+                  margin: calc(10vh − 265px) calc(5vw - 1px) 0 auto;
+                  border-radius: 5px;
+                  padding: 10px 0;
+                  transition: color .5s ease,border-color .5s ease;
+                  border:1px solid black;
+                      }                
+                  div#headerNavBar p:hover{
+                	border:1px solid white;
+                 	color:white;
+                  border-color:white;
+                      }
+                  button#slideNavBarButton {
+                  	display: block;
+                      }
+                  button#slideNavBarButton:hover {
+                  border-color: white;
+                  color: white;
+                      }
+                  .mainChilds{
+                  	height: 50vh;
+                  }
+                  #anonymousChildMain-1{
+                  	margin-top: 10vh;
+                  }
+                  #animArrow{
+                  	z-index: 52;
+                  }
+                  #login{}
+                  #services{}
+                  #activits{}
+                  #aboutUs{}
+                  #header{order:1;}
+        
+                  }
 
   @media Screen and (min-width: 640px){
-      #headerNavBar1Child{
- 	       margin-left: 20vw;
-        }
-}
-@keyframes upDown{
-	0%  {top: calc(100vh - 130px);}
-	50% {top: calc(100vh - 160px);}
-	100%{top: calc(100vh - 130px);}
-}
+                  #headerNavBarLogin{
+ 	                   margin-left: 20vw;
+                    }
+} 
+    @keyframes upDown{
+	     0%  {top: calc(var(--heighty--) - 130px);}
+	     50% {top: calc(var(--heighty--) - 160px);}
+	     100%{top: calc(var(--heighty--) - 130px);}
+     }
