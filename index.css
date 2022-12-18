@@ -44,8 +44,17 @@ hr{
 .mainChilds:first-child{
 	margin-top: 100px;
 }
+.navBarFont{
+	font-family: 'Fjalla One', sans-serif;
+}
 .centered{
 	text-align: center;
+}
+.whited{
+	color: white;
+}
+.blacked{
+	color: black;
 }
 .bi-facebook, .bi-twitter, .bi-instagram {
 	font-size: 30px;
@@ -98,7 +107,7 @@ hr{
 	border-bottom: 2px solid black;
 }
 #headerLogo{
-	background: url('1.jpg');
+	background: url('logo.png');
 	background-size: 100px 70px;
 	background-repeat: no-repeat;
 	width: 100px;
@@ -140,7 +149,88 @@ hr{
 #headerNavBar{
 	display: block;
 }
+#mainAboutUs{
+	font-size: 40px;
+	font-family: 'Caveat', cursive;
+	display: inline-block;
+	border-bottom: 1px solid black;
+	padding: 0;
+	margin-top:10px;
+}
+#mainAboutUs::after{
+	position: relative;
+	top:3px;
+	content: '';
+	display: block;
+	width: 20%;
+	margin-left: 40%;
+	border: 3px solid var(--fire--);
+}
+#Z-team-paragraph {
+font-size: 20px;
+text-align: left;
+}
+ #logoAboutUs{
+   background-image: url('log0.png');
+   background-repeat:no-repeat;
+  
+}
+#aboutUs{
+	background-color: var(--bg--);
+}
+ .gridContainer{
+ 	display: flex;
+ 	gap: 5px;
+background-color: var(--deep--);
+ 	width: 80vw;
+ 	margin:0 10vw;
+ 	height: calc(100vh - 90px - 52px - 100px);
+ 	border-radius: 10px;
+ }
+ #aboutlogoPic{
 
+ 	flex: 1;
+ }
+ #aboutWelcome{
+  padding: calc(20vh ) 10px;
+ text-align: left;
+ 	flex: 1;
+ 	text-shadow: 0 0 3px black;
+ }
+ #log0Size{
+ 	  	width: 30vw;
+ 	  	margin: 10vh 0;
+	   height: calc(100vh - 90px - 52px - 200px);
+
+ }
+ #activits{
+ 	display: grid;
+ 	grid-template-columns: auto auto auto;
+ 	grid-template-rows: auto auto;
+ 	background-color: rgba(0, 0, 0, .6);
+ 	margin: 30px 0;
+ 	gap:5px;
+ 	width: 100vw;
+ 	height: calc(100vh - 90px);
+ }
+ .activisteInners{
+ 	background-color: aqua;
+ 	margin: 30px;
+ 	border-radius: 20px;
+ 	background-image: url('bg-test.jpg');
+ 	background-size: 100% 100%;
+ 	cursor: pointer;
+ }
+#activitsInner2-1, #activitsInner2-2, #activitsInner2-3, 
+#activitsInner2-4,#activitsInner2-5,#activitsInner2-6{  
+	position: relative;
+	top: 100%;
+	color: white;
+	font-size: 20px;
+	transition: top .4s ease, color 1.3s ease;
+	background-color: rgba(0, 0, 0, .7);
+	padding: 10px 0 100px 0;
+}
 /*****************Media*********************/
   @media Screen and ( max-width : 570px ){
   	            :root{ 
@@ -189,7 +279,35 @@ hr{
                   #anonymousChildMain-1{
                   	margin-top: 10vh;
                   }
-        
+                  
+                  #mainAboutUs{
+                     	font-size: 25px;
+                   }
+                   #activits{
+                   	height: 200vh;
+                   	grid-template-columns: auto;
+                   	grid-template-rows: auto auto auto auto auto auto;
+                   }
+                   .gridContainer{
+                    display: grid;
+                   	width: 95vw;
+ 	                  margin:0 2.5vw;
+                    grid-template-rows: 1fr 1fr;
+                   	grid-template-columns: 1fr;
+                   	height: calc(50vh - 90px - 30px );
+                   }
+                    #aboutlogoPic{
+                    	grid-row: 1/span 1;
+                    }
+                    #aboutWelcome{
+                    	grid-row: 2/span 1;
+                    	padding: 20px;
+                    }
+                    #log0Size{
+	                   	width: 50vw;
+	                   	margin: 0;
+	                   	height: calc(25vh - 45px - 15px );
+	                   }
                   }
 
   @media Screen and (min-width: 640px){
@@ -197,7 +315,8 @@ hr{
  	                   margin-left: 20vw;
                     }
 } 
-      @keyframes upDown{
+    
+    @keyframes upDown{
 	     0%  {top: calc(var(--heighty--) - 130px);}
 	     50% {top: calc(var(--heighty--) - 160px);}
 	     100%{top: calc(var(--heighty--) - 130px);}
