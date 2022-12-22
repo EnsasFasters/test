@@ -1,14 +1,14 @@
-
-var sNavBarPhoneCounter=0;
-function NavBarPhone(){
-  var sNavBarPhone = window.document.getElementById("headerNavBar");  
-  if(sNavBarPhoneCounter%2==0){
-	    sNavBarPhone.style.left = '0';
+    var sNavBarPhoneCounter=0;
+  $('#slideNavBarButton').click(function(){
+   if(sNavBarPhoneCounter%2==0){
+      $('#headerNavBar').css('left','0');
    }else{
-		sNavBarPhone.style.left = '-100vw';
+      $('#headerNavBar').css('left','-120vw');
    }
     sNavBarPhoneCounter++;
-   }
+  }
+  );
+$('headerNavBar')
 
 $('#activitsInner1').hover(function(){
            $('#activitsInner2-1').css('top','70%');
