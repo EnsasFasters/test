@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 	<title>Welcome to Anonymous </title>
 </head>
-<body id="body">
+<body>
 	<header id="header">
 		<a href="index.html"><div id="headerLogo"></div></a>
 		<div id="headerNavBar" >
 			<a href="#login"    onclick="NavBarPhone()" style="order:5;-ms-order:5;"><p class="navBarFont" id="headerNavBarLogin">Login</p></a>
-			<a href="#services" onclick="NavBarPhone()" style="order:4;-ms-order:4;"><p class="navBarFont">Services</p></a>
+			<a href="#benefits" onclick="NavBarPhone()" style="order:4;-ms-order:4;"><p class="navBarFont">Benefits</p></a>
 			<a href="#activits" onclick="NavBarPhone()" style="order:3;-ms-order:3;"><p class="navBarFont">Activities</p></a> 
 			<a href="#aboutUs"  onclick="NavBarPhone()" style="order:2;-ms-order:2;"><p class="navBarFont">About Us</p></a>
 			<a href="#header"   onclick="NavBarPhone()" style="order:1;-ms-order:1;"><p class="navBarFont">Home</p></a>
 		</div>
-		<button id="slideNavBarButton" onclick="NavBarPhone()"><i class="bi bi-list"></i></button>
+		<button id="slideNavBarButton" ><i class="bi bi-list"></i></button>
 	</header>
 	<main>
 		<!-----Next 1---->
-		<div class="mainChilds whited" style="background-color: rgba(0, 0, 0, .7);">
-			   <p id="animArrow"><i class="bi bi-arrow-down-circle"></i></p><br>
+		<div class="mainChilds whited" style="background-color: rgba(0, 0, 0, .7);min-height: 430px;max-height: 600px;">
+			<!---->   <p id="animArrow"><i class="bi bi-arrow-down-circle"></i></p><br>
 			   <p class="centered" id="anonymousChildMain-1">	Anonymous !</p>
 			   <p class="centered">	Education, with another taste</p><br>
 			   <p class="centered">
@@ -70,9 +71,10 @@
        
 		</div><hr>
 		 <!-----Next 4------>
-		<div class="mainChilds" id="services">
-
-			
+		<div class="mainChilds" id="benefits">
+            <div class="benefitsInner"></div>
+			<div class="benefitsInner"></div>
+			<div class="benefitsInner"></div>
 		</div>
 	</main>
 	<footer id="footer">
@@ -81,9 +83,9 @@
 
 </body>
 </html>
-<link rel="stylesheet" type="text/css" href="index.css">
 <script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="index.js" onload="console.log('succes')"></script>
+<script type="text/javascript" src="index.js"></script>
+
 <style>
 	#footer{
 		height: 200px;
