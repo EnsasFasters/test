@@ -302,7 +302,7 @@ background-color: var(--deep--);
 	     100%{top: calc(var(--heighty--) - 130px);}
      }
 	#footer{
-    background-color: rgba(5,19,160,.9);
+    background-color: rgba(16,90,82,.9);
     border:2px solid white;
     padding: 0vh;
     width: 100vw;
