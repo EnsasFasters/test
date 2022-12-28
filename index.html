@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 	<title>Welcome to Anonymous </title>
 </head>
-<body>
+<body id="X">
 	<header id="header">
 		<a href="index.html"><div id="headerLogo"></div></a>
 		<div id="headerNavBar" >
-			<a href="#login"    onclick="NavBarPhone()" style="order:5;-ms-order:5;"><p class="navBarFont" id="headerNavBarLogin">Login</p></a>
-			<a href="#benefits" onclick="NavBarPhone()" style="order:4;-ms-order:4;"><p class="navBarFont">Benefits</p></a>
-			<a href="#activits" onclick="NavBarPhone()" style="order:3;-ms-order:3;"><p class="navBarFont">Activities</p></a> 
-			<a href="#aboutUs"  onclick="NavBarPhone()" style="order:2;-ms-order:2;"><p class="navBarFont">About Us</p></a>
-			<a href="#header"   onclick="NavBarPhone()" style="order:1;-ms-order:1;"><p class="navBarFont">Home</p></a>
+			<a href="#login"    class="clicky" style="order:5;-ms-order:5;"><p class="navBarFont" id="headerNavBarLogin">Login</p></a>
+			<a href="#benefits" class="clicky" style="order:4;-ms-order:4;"><p class="navBarFont">Benefits</p></a>
+			<a href="#activits" class="clicky" style="order:3;-ms-order:3;"><p class="navBarFont">Activities</p></a> 
+			<a href="#aboutUs"  class="clicky" style="order:2;-ms-order:2;"><p class="navBarFont">About Us</p></a>
+			<a href="#X"   class="clicky" style="order:1;-ms-order:1;"><p class="navBarFont">Home</p></a>
 		</div>
 		<button id="slideNavBarButton" ><i class="bi bi-list"></i></button>
 	</header>
@@ -71,15 +71,40 @@
        
 		</div><hr>
 		 <!-----Next 4------>
-		<div class="mainChilds" id="benefits">
-            <div class="benefitsInner"></div>
-			<div class="benefitsInner"></div>
-			<div class="benefitsInner"></div>
+		<div id="benefits">
+            <div class="benefitsInner" id="benefitsInner1">
+            	<div id="benefitsInner1b"></div>
+            	<span id="benefitsInner11">
+            		<i class="bi bi-file-earmark-spreadsheet"></i> test your study knowledge
+            	</span>
+            </div>
+
+			<div class="benefitsInner" id="benefitsInner2">
+				<div id="benefitsInner2b"></div>
+            	<span id="benefitsInner22">
+            		<i class="bi bi-alarm"></i> learn to manage ur time
+            	</span>
+			</div>
+
+			<div class="benefitsInner" id="benefitsInner3">
+				<div id="benefitsInner3b"></div>
+            	<span id="benefitsInner33">
+            		<i class="bi bi-dollar"></i> no Cost at all
+            	</span>
+				
+			</div>
 		</div>
 	</main>
+	<br>
 	<footer id="footer">
-		Footer
-	</footer>
+    <br>
+     <div id="peaxySQL">
+     	<h2>Merci de votre visite!</h2> 
+     	Si vous souhaitez nous faire part de vos suggestions, des options que vous souhaitez ajouter, des fichiers que vous souhaitez mettre à jour, dire merci, poser une question ou toute autre chose pour laquelle vous pensez que nous pouvons vous aider, il vous suffit de
+envoyer un message par e-mail :<br>
+     <code id="J_Query"><a href="mailto:benhamza4sofiane@gmail.com" target="_blank" style="text-decoration: none;">envoyez un message </a></code> </div>
+     <hr>
+     <div id="speaktous"> <p style="width: 20%;float:left;font-size: 24px;"><a href="#X" style="text-decoration: none;color:white;"><i class="bi bi-arrow-up-circle"></i></a></p><p style="width: 70%;float:right;text-align: right;">Website designed by <br><strong><a href="" target="_blank" style="text-decoration: none;color: violet;">BENHAMZA&nbsp;Sofiane</a></strong></p></div>  </footer>
 
 </body>
 </html>
@@ -87,13 +112,5 @@
 <script type="text/javascript" src="index.js"></script>
 
 <style>
-	#footer{
-		height: 200px;
-		border-top: 2px solid white;
-		padding:75px 0;
-		font-size: 50px;
-		text-align: center;
-		background-color: black;
-		color: white;
-	}
+
 </style>
