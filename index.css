@@ -2,116 +2,11 @@
 --beach--  :  #23b2a7;
 --fire--   :  #e05e20;
 --bg--     :  #d8d6d4;
---deeper-- :  #ffcc00; /*#105a52;*/
+--deeper-- :  #105a52;
 --deep--   :  #1f877d;
 --heighty--:   100vh;
 }
-/*****************Media*********************/
-  @media Screen and ( max-width : 570px ){
-  	            :root{ 
-  	     	             --heighty--: 60vh;
-  	             }
-                 div#headerNavBar{
-                   background-color: var(--deep--);  
-                   position: fixed;
-                   top: 85px;
-                   display: flex;
-                   flex-direction: column;
-                   width: calc(100vw - 4px);
-                   border: 2px solid black;
-                   height:calc(100vh - 85px - 4px);
-                   left: -100vw;
-                   transition: left .5s ease;
-                    	}
-                  div#headerNavBar p{
-                  text-align: center;
-                  width: 90vw;
-                  margin: calc(10vh − 265px) calc(5vw - 1px) 0 auto;
-                  border-radius: 5px;
-                  padding: 10px 0;
-                  transition: color .5s ease,border-color .5s ease;
-                  border:1px solid black;
-                      }                
-                  div#headerNavBar p:hover{
-                	border:1px solid white;
-                 	color:white;
-                  border-color:white;
-                      }
-                  button#slideNavBarButton {
-                  	display: block;
-                  	color: black;
-                      }
-                  button#slideNavBarButton:hover {
-                  border-color: white;
-                  color: white;
-                      }
-                  .mainChilds{
-                  	height: 50vh;
-                  }
-                  #anonymousChildMain-1{
-                  	margin-top: 10vh;
-                  	font-size: 40px;
-                  }
-                  
-                  #mainAboutUs{
-                     	font-size: 25px;
-
-                   }
-                   #activits{
-                   	height: 200vh;
-                   	grid-template-columns: auto;
-                   	grid-template-rows: auto auto auto auto auto auto;
-                   }
-                   .gridContainer{
-                    display: grid;
-                   	width: 95vw;
- 	                  margin:0 2.5vw;
-                    grid-template-rows: 1fr 1fr;
-                   	grid-template-columns: 1fr;
-                   	height: calc(50vh - 90px - 30px );
-                   }
-                    #aboutlogoPic{
-                    	grid-row: 1/span 1;
-                    }
-                    #aboutWelcome{
-                    	grid-row: 2/span 1;
-                    	padding: 20px;
-                    }
-                    #log0Size{
-	                   	width: 50vw;
-	                   	margin: 0;
-	                   	height: calc(25vh - 45px - 15px );
-	                   }
-}
-
-@media Screen and (max-height: 840px){
-                  #headerNavBarLogin{
- 	                   margin-left: 20vw;
-                    }
-}
-@media Screen and (max-height: 581px){
-                    #activits{
-                   	height: 150vh;
-                   	min-height: 780px;
-                   	grid-template-columns: auto auto;
-                   	grid-template-rows:  auto auto auto;
-                   }
-	             #anonymousChildMain-1{
-                 margin-top: 3vh;
-                 margin-bottom: 0;
-	             }
-	             p{
-	             	margin: 0;
-	             }
-	             #log0Sizae{
-	             	height: 150px;
-	             }
-	              #animArrow{
-	              	display: none;
-	                   }
-                 
-} 
-/**************Selectors* ************/
+/**************Selectors*************/
 
 body{
 	background-image: url("1.jpg");
@@ -133,9 +28,8 @@ div#headerNavBar p{
 }
 
  div#headerNavBar p:hover{
- 	color:white;
-  border-bottom-color:white;
-  border-bottom-width:3px ;
+ 	color: white;
+  border-bottom: 3px solid white;
   text-shadow: 0 0 8px aqua, 0 0 8px aqua;
   }
 div {
@@ -322,6 +216,7 @@ background-color: var(--deep--);
  	gap:5px;
  	width: 100vw;
  	height: calc(100vh - 90px);
+ 	min-height: 600pssx;
  }
  #aboutUs{
 	background-color: var(--bg--);
@@ -347,30 +242,223 @@ background-color: var(--deep--);
 	padding: 10px 0 300px 0;
 }
 #benefits{
-
 	width: 100vw;
-	height: 50vh;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr; 
+	display: flex;
+  justify-content: space-evenly;
   gap: 0px;
-  padding: 20px 0;
-  background-color: red;
+  padding: 25px 0;
+  background-color: rgba(0, 0, 0, .7);
+  height: 200px;
 }
+#benefitsInner1b{
+  width:100%;
+  height: 100%;
+  background-image: url('sheet.png');
+  background-size: 100% 100%;
+}
+#benefitsInner11{
+ position: relative;
+ top: 0%;
+ font-size: 1.3em;
+ transition: top .3s ease;
+}
+#benefitsInner2b{
+   width:100%;
+   height: 100%;
+   background-image: url('clock.png');
+   background-size: 100% 100%;
+}
+#benefitsInner22{
+ position: relative;
+ top: 0%;
+ font-size: 1.3em;
+ transition: top .3s ease;
+} 
+#benefitsInner3b{
+   width:100%;
+   height: 100%;
+   background-image: url('wallet.png');
+   background-size: 100% 100%;
+}
+#benefitsInner33{
+  position: relative;
+ top: 0%;
+ font-size: 1.3em;
+ transition: top .3s ease;
+}
+#benefitsInner11, #benefitsInner22, #benefitsInner33{
+	text-shadow: 0 0 8px var(--deeper--), 0 0 8px var(--deeper--), 0 0 8px var(--deeper--);
+}  
 .benefitsInner{
-   background-color: aqua;
-   border-radius: 10px;
-   margin-left: 20px ;
+	border-radius: 10px;
+	width: 230px;
+	color: black;
+	text-align: center;
 }
-.benefitsInner:last-child{
-   margin-right: 20px ;
-   
-}
-    
+
     @keyframes upDown{
 	     0%  {top: calc(var(--heighty--) - 130px);}
 	     50% {top: calc(var(--heighty--) - 160px);}
 	     100%{top: calc(var(--heighty--) - 130px);}
      }
+	#footer{
+    background-color: rgba(5,19,160,.9);
+    border:2px solid white;
+    padding: 0vh;
+    width: 100vw;
+  overflow: hidden;
+  }
+  #J_Query{
+  	position: relative;
+  	top:5vh;
+  }
+   #speaktous{
 
+   	color:white;
+   	margin: 0;
+   	background-color: rgb(10,10,10);
+   	width: 100vw;
+   	z-index: -2;
+   	border:2px solid white;
+   	padding:1vh 2vw;
+   	padding-bottom: 0;
+   }
+   #peaxySQL{
+   	color: white;
+   	padding-left: 5vw;
+   	padding-bottom:5vh;
+   	width: 80vw;
+   	margin-left:10vw ;
+   	font-size: 18px;
+   }
  
-0
+
+/*****************Media*********************/
+  @media Screen and ( max-width : 570px ){
+  	            :root{ 
+  	     	             --heighty--: 60vh;
+  	             }
+                 div#headerNavBar{
+                   background-color: var(--deep--);  
+                   position: fixed;
+                   top: 85px;
+                   display: flex;
+                   flex-direction: column;
+                   width: calc(100vw - 4px);
+                   border: 2px solid black;
+                   height:calc(100vh - 85px - 4px);
+                   left: -100vw;
+                   transition: left .5s ease;
+                    	}
+                  div#headerNavBar p{
+                  text-align: center;
+                  width: 90vw;
+                  margin: calc(10vh − 265px) calc(5vw - 1px) 0 auto;
+                  border-radius: 5px;
+                  padding: 20px 0;
+                  transition: color .5s ease,border-color .5s ease;
+                  border:1px solid black;
+                      }                
+                  div#headerNavBar p:hover{
+                	border:1px solid white;
+                 	color:white;
+                  border-color:white;
+                  box-shadow: 0 0 8px aqua;
+                      }
+                  button#slideNavBarButton {
+                  	display: block;
+                  	color: black;
+                      }
+                  button#slideNavBarButton:hover {
+                  border-color: white;
+                  color: white;
+                      }
+                  .mainChilds{
+                  	height: 50vh;
+                  }
+                  #anonymousChildMain-1{
+                  	margin-top: 10vh;
+                  	font-size: 40px;
+                  }
+                  
+                  #mainAboutUs{
+                     	font-size: 25px;
+
+                   }
+                   #activits{
+                   	height: 200vh;
+                   	grid-template-columns: auto;
+                   	grid-template-rows: auto auto auto auto auto auto;
+                   }
+                   .gridContainer{
+                    display: grid;
+                   	width: 95vw;
+ 	                  margin:0 2.5vw;
+                    grid-template-rows: 1fr 1fr;
+                   	grid-template-columns: 1fr;
+                   	height: calc(50vh - 90px - 30px );
+                   }
+                    #aboutlogoPic{
+                    	grid-row: 1/span 1;
+                    }
+                    #aboutWelcome{
+                    	grid-row: 2/span 1;
+                    	padding: 20px;
+                    }
+                    #log0Size{
+	                   	width: 50vw;
+	                   	margin: 0;
+	                   	height: calc(25vh - 45px - 15px );
+	                   }
+	                   #benefits{
+	                   	display: grid;
+	                   	grid-template-columns: 1fr;
+	                   	height: 80vh;
+	                   	gap: 20px;
+	                   }
+	                   .benefitsInner{
+	                   	width: 80vw;
+	                   	margin-left: 10vw;
+	                   }
+
+}
+
+/*--Solve Problems-*/ 
+@media Screen and (max-height: 840px){
+                  #headerNavBarLogin{
+ 	                   margin-left: 20vw;
+                    }
+}
+@media Screen and (max-width: 997px) and (min-width: 571px){
+                    #activits{
+                    	max-height: 600px;
+                      grid-template-columns: 1fr 1fr;
+
+                    }
+}
+@media Screen and (max-height: 581px){
+                  #activits{
+                   	height: 150vh;
+                   	min-height: 780px;
+                   	grid-template-columns: auto auto;
+                   	grid-template-rows:  auto auto auto;
+                  }
+	             #anonymousChildMain-1{
+                 margin-top: 3vh;
+                 margin-bottom: 0;
+	             }
+	             p{
+	             	margin: 0;
+	             }
+	             #log0Sizae{
+	             	height: 150px;
+	             }
+	              #animArrow{
+	              	display: none;
+	                   }
+                 
+}
+}
+@media(max-width: 768px){
+#peaxySQL{width: 90vw;}
+}
